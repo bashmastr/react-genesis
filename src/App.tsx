@@ -1,18 +1,25 @@
 import {
-  ChakraProvider,
+  ChakraProvider, Box,
 } from "@chakra-ui/react";
 import {
   HashRouter as Router,
 } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import { QueryClient, QueryClientProvider } from "react-query";
+import TopBanner from "./components/TopBanner";
+import Banner from "./components/Banner";
+import SearchSection from "./components/SearchSection";
+import Footer from "./components/footer/Footer";
 
 const queryClient = new QueryClient();
 
 function AppContent() {
   return (
     <>
-      Hello World!
+      <TopBanner />
+      <Banner />
+      <SearchSection />
+      <Footer />
     </>
   );
 }
